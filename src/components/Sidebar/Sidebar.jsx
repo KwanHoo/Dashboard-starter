@@ -2,6 +2,7 @@ import React from 'react'
 import './Sidebar.css'
 import Logo from '../../imgs/logo.png'
 
+import { SidebarData } from '../../Data/Data'
 const Sidebar = () => {
   return (
     <div className="Sidebar">
@@ -15,16 +16,22 @@ const Sidebar = () => {
 
       {/* 사이드 바 부분 */}
       <div className='menu'>
-        <div className="menuItem">
-          <div>
-            Icon
-          </div>
-          <span>Dashboard</span>
+        {SidebarData.map((item, index) => {
+          return (
+            <div className="menuItem">
+              <item.icon />
+              <span>
+                {item.heading}
+              </span>
+              
+            </div>
+            )
+        })}
+        
+
         </div>
       </div>
 
-
-    </div>
   )
 }
 
