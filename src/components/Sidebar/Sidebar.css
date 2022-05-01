@@ -62,4 +62,12 @@
     width: 8px;
     height: 100%;
     background: var(--pink);
+    margin-right: calc(1rem - 8px);
 }
+
+/* 마지막 부분 화살표 아이콘 뺏음 */
+/* .menu .menuItem:last-child{
+    position: absolute;
+    bottom: 2.3rem;
+    width: 100%
+} */
